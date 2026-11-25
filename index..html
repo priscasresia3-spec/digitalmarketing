@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhinneka Digital Pulse — Digital Marketing &amp; Online Customer Experience (Chapter 10)</title>
+  <meta name="description" content="Landing page murni bertema Digital Marketing &amp; Delivering the Online Customer Experience berbasis Modul Chapter 10 (Universitas Satya Terra Bhinneka)." />
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    // Konfigurasi palet Digital Marketing murni (tanpa warna hijau sama sekali)
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            midnight: {
+              800: '#1E293B',
+              900: '#0F172A',
+              950: '#090D16',
+            },
+            royal: {
+              50: '#F5F3FF',
+              100: '#EDE9FE',
+              200: '#DDD6FE',
+              500: '#7C3AED',
+              600: '#6D28D9',
+              700: '#5B21B6',
+              900: '#312E81',
+            },
+            rosebrand: {
+              50: '#FFF1F2',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#FB7185',
+              500: '#F43F5E',
+              600: '#E11D48',
+              700: '#BE123C',
+            },
+            champagne: {
+              100: '#FEF3C7',
+              300: '#FCD34D',
+              400: '#FBBF24',
+              500: '#F59E0B',
+              600: '#D97706',
+            },
+            surface: '#F8FAFC',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            'luxe': '0 20px 40px -15px rgba(15, 23, 42, 0.16)',
+            'glow-rose': '0 10px 25px -5px rgba(225, 29, 72, 0.35)',
+            'card': '0 4px 20px -2px rgba(15, 23, 42, 0.06)',
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      background-color: #F8FAFC;
+      color: #0F172A;
+      overflow-x: hidden;
+    }
+    .glass-nav {
+      background: rgba(248, 250, 252, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .brand-gradient {
+      background: linear-gradient(135deg, #0F172A 0%, #312E81 55%, #6D28D9 100%);
+    }
+    .cta-gradient {
+      background: linear-gradient(135deg, #E11D48 0%, #7C3AED 100%);
+    }
+    .cta-gradient:hover {
+      background: linear-gradient(135deg, #BE123C 0%, #6D28D9 100%);
+    }
+    /* Indikator fokus kontras tinggi untuk aksesibilitas web (Chapter 10) */
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 3px solid #E11D48;
+      outline-offset: 2px;
+    }
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-7px); }
+    }
+    .animate-float {
+      animation: floatSlow 5s ease-in-out infinite;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F8FAFC;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #6D28D9;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased selection:bg-rosebrand-200 selection:text-midnight-900 pb-20 md:pb-0">
+
+  <!-- ===================================================================== -->
+  <!-- 1. STICKY TOP NAVIGATION BAR (Bhinneka Digital Pulse)               -->
+  <!-- ===================================================================== -->
+  <header class="sticky top-0 z-40 glass-nav border-b border-slate-200/80 transition-all">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between gap-3" aria-label="Navigasi Utama Digital Marketing">
+      <!-- Brand Mark -->
+      <a href="#beranda" class="flex items-center gap-2.5 group shrink-0">
+        <div class="w-10 h-10 rounded-2xl cta-gradient text-white flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+          <i class="fa-solid fa-wave-square text-base" aria-hidden="true"></i>
+        </div>
+        <div>
+          <span class="font-serif text-lg sm:text-xl font-bold tracking-tight text-midnight-900 block leading-none">Bhinneka Digital Pulse</span>
+          <span class="text-[10px] uppercase tracking-widest text-royal-600 font-bold">Digital Marketing • Chapter 10</span>
+        </div>
+      </a>
+
+      <!-- Link Navigasi Bagian -->
+      <div class="hidden xl:flex items-center gap-6 text-sm font-semibold text-slate-700 shrink-0">
+        <a href="#beranda" class="hover:text-rosebrand-600 transition-colors py-1">Beranda</a>
+        <a href="#piramida-pengalaman" class="hover:text-rosebrand-600 transition-colors py-1">Piramida Pengalaman</a>
+        <a href="#tahapan-proyek" class="hover:text-rosebrand-600 transition-colors py-1">Tahapan Proyek</a>
+        <a href="#ux-cro" class="hover:text-rosebrand-600 transition-colors py-1">UX &amp; CRO</a>
+        <a href="#teori-ch10" class="hover:text-rosebrand-600 transition-colors py-1">Teori Ch. 10</a>
+      </div>
+
+      <!-- Tombol Aksi Kanan: Modal Teori Ch. 10 & Modal Konsultasi Langsung -->
+      <div class="flex items-center gap-2 sm:gap-2.5 shrink-0">
+        <button type="button" onclick="openTheoryModal()" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-royal-50 text-royal-700 hover:bg-royal-100 transition-colors border border-royal-200 cursor-pointer">
+          <i class="fa-solid fa-book-open text-royal-600" aria-hidden="true"></i>
+          <span>Ringkasan Ch. 10</span>
+        </button>
+
+        <button type="button" onclick="openInquiryModal('header_cta')" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl cta-gradient text-white text-xs font-bold shadow-glow-rose hover:opacity-95 transition-all cursor-pointer">
+          <i class="fa-solid fa-paper-plane text-xs" aria-hidden="true"></i>
+          <span>Konsultasi Digital</span>
+        </button>
+
+        <!-- Tombol Menu Mobile -->
+        <button type="button" id="mobile-menu-btn" onclick="toggleMobileMenu()" class="xl:hidden p-2.5 rounded-xl bg-slate-100 text-midnight-900 hover:bg-slate-200 cursor-pointer" aria-expanded="false" aria-controls="mobile-menu" aria-label="Buka Menu Navigasi">
+          <i class="fa-solid fa-bars text-lg" aria-hidden="true"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Dropdown Menu Mobile -->
+    <div id="mobile-menu" class="hidden xl:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-5 space-y-2 shadow-xl">
+      <a href="#beranda" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl text-sm font-semibold hover:bg-slate-100">Beranda</a>
+      <a href="#piramida-pengalaman" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl text-sm font-semibold hover:bg-slate-100">Piramida Pengalaman Online</a>
+      <a href="#tahapan-proyek" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl text-sm font-semibold hover:bg-slate-100">Tahapan Proyek &amp; Pengembangan</a>
+      <a href="#ux-cro" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl text-sm font-semibold hover:bg-slate-100">UX, Aksesibilitas &amp; CRO</a>
+      <a href="#teori-ch10" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl text-sm font-semibold hover:bg-slate-100">Konsultasi &amp; Teori Ch. 10</a>
+      <div class="pt-2 border-t border-slate-200 flex gap-2">
+        <button type="button" onclick="toggleMobileMenu(); openTheoryModal();" class="flex-1 px-3 py-2.5 rounded-xl text-xs font-bold bg-royal-50 text-royal-700 border border-royal-200 cursor-pointer">
+          Teori Ch. 10
+        </button>
+        <button type="button" onclick="toggleMobileMenu(); openInquiryModal('mobile_menu');" class="flex-1 px-3 py-2.5 rounded-xl text-xs font-bold cta-gradient text-white cursor-pointer">
+          Kirim Brief
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================================================================== -->
+    <!-- 2. HERO SECTION MURNI DIGITAL MARKETING & ONLINE CUSTOMER EXPERIENCE  -->
+    <!-- ===================================================================== -->
+    <section id="beranda" class="relative overflow-hidden pt-10 pb-16 sm:pt-14 sm:pb-24 bg-gradient-to-b from-royal-50/75 via-surface to-white">
+      <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-rosebrand-200/40 blur-3xl pointer-events-none" aria-hidden="true"></div>
+      <div class="absolute top-1/2 -left-24 w-80 h-80 rounded-full bg-royal-200/50 blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+          <!-- Kolom Kiri: Nilai Rasional & Emosional, UCD, Mobile-First & CRO -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div class="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2 px-3.5 py-1.5 rounded-full bg-white border border-royal-200 shadow-2xs text-xs font-bold text-midnight-900">
+              <span class="px-2 py-0.5 rounded-full bg-royal-600 text-white text-[10px] uppercase">Chapter 10</span>
+              <span>Delivering the Online Customer Experience • Universitas Satya Terra Bhinneka</span>
+            </div>
+
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-midnight-900 leading-[1.14] tracking-tight">
+              Menghadirkan <span class="bg-clip-text text-transparent bg-gradient-to-r from-rosebrand-600 to-royal-600 italic">Online Customer Experience</span> yang Menyatukan Nilai Rasional &amp; Emosional
+            </h1>
+
+            <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              Dalam pemasaran digital modern, kualitas interaksi digital menentukan akuisisi, retensi, dan loyalitas pelanggan. Melalui pendekatan <strong>user-centered design</strong>, kesiapan <strong>mobile-first (&gt;50% trafik seluler)</strong>, serta <strong>Conversion Rate Optimization (CRO)</strong> berkelanjutan, setiap kanal digital bekerja selaras dengan tujuan bisnis.
+            </p>
+
+            <!-- CTA Utama -->
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-1">
+              <button type="button" onclick="openInquiryModal('hero_primary_cta')" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl cta-gradient text-white font-bold text-base shadow-glow-rose transition-all transform hover:-translate-y-0.5 cursor-pointer">
+                <i class="fa-solid fa-compass-drafting" aria-hidden="true"></i>
+                <span>Mulai Diskusi Strategi Digital</span>
+              </button>
+              <a href="#piramida-pengalaman" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl bg-midnight-900 hover:bg-royal-900 text-white font-bold text-base shadow-md transition-all">
+                <i class="fa-solid fa-layer-group text-champagne-400" aria-hidden="true"></i>
+                <span>Jelajahi Piramida Pengalaman</span>
+              </a>
+            </div>
+
+            <!-- 4 Metrik Kunci Pemasaran Digital & Pengalaman Online -->
+            <div class="pt-5 grid grid-cols-2 sm:grid-cols-4 gap-3.5 border-t border-slate-200 max-w-2xl mx-auto lg:mx-0">
+              <div class="bg-white/95 p-3.5 rounded-2xl border border-slate-200/90 shadow-2xs">
+                <p class="font-serif text-xl sm:text-2xl font-bold text-rosebrand-600">&gt;50%</p>
+                <p class="text-[11px] font-semibold text-slate-600 mt-0.5">Mobile Traffic Share</p>
+              </div>
+              <div class="bg-white/95 p-3.5 rounded-2xl border border-slate-200/90 shadow-2xs">
+                <p class="font-serif text-xl sm:text-2xl font-bold text-royal-600">Iteratif</p>
+                <p class="text-[11px] font-semibold text-slate-600 mt-0.5">Continuous CRO Testing</p>
+              </div>
+              <div class="bg-white/95 p-3.5 rounded-2xl border border-slate-200/90 shadow-2xs">
+                <p class="font-serif text-xl sm:text-2xl font-bold text-midnight-900">UCD</p>
+                <p class="text-[11px] font-semibold text-slate-600 mt-0.5">User-Centered UX</p>
+              </div>
+              <div class="bg-white/95 p-3.5 rounded-2xl border border-slate-200/90 shadow-2xs">
+                <p class="font-serif text-xl sm:text-2xl font-bold text-champagne-600">Multi-Touch</p>
+                <p class="text-[11px] font-semibold text-slate-600 mt-0.5">Omnichannel Reach</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kolom Kanan: Visual Konseptual Digital Marketing & Pengalaman Online (Zero Green) -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto max-w-md lg:max-w-none">
+              <div class="rounded-3xl overflow-hidden bg-midnight-900 border-4 border-white shadow-luxe text-white">
+                <div class="p-6 sm:p-7 bg-gradient-to-br from-midnight-900 via-royal-900 to-midnight-950">
+                  <div class="flex items-center justify-between text-xs mb-5">
+                    <span class="px-2.5 py-1 rounded-full bg-rosebrand-600 font-bold uppercase tracking-wider text-[10px]">Digital Experience Core</span>
+                    <span class="text-champagne-300 font-semibold">Rasional + Emosional</span>
+                  </div>
+
+                  <!-- SVG Ilustrasi Arsitektur Pengalaman Pelanggan Online (Tanpa Warna Hijau) -->
+                  <svg viewBox="0 0 400 220" class="w-full h-auto rounded-2xl bg-midnight-950/80 border border-white/10 p-3" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram konseptual pengalaman pelanggan digital yang memadukan nilai emosional, nilai rasional, dan optimasi konversi">
+                    <rect x="20" y="22" width="165" height="76" rx="12" fill="#1E293B" stroke="#7C3AED" stroke-width="2"/>
+                    <text x="34" y="48" fill="#FBBF24" font-size="11" font-weight="bold" font-family="sans-serif">EMOTIONAL VALUES</text>
+                    <text x="34" y="68" fill="#E2E8F0" font-size="11" font-family="sans-serif">Tone, Visual Style &amp; Trust</text>
+                    <text x="34" y="84" fill="#FDA4AF" font-size="10" font-family="sans-serif">Mendorong kedekatan &amp; loyalitas</text>
+
+                    <rect x="215" y="22" width="165" height="76" rx="12" fill="#1E293B" stroke="#E11D48" stroke-width="2"/>
+                    <text x="229" y="48" fill="#FBBF24" font-size="11" font-weight="bold" font-family="sans-serif">RATIONAL VALUES</text>
+                    <text x="229" y="68" fill="#E2E8F0" font-size="11" font-family="sans-serif">Relevance, Speed &amp; Clarity</text>
+                    <text x="229" y="84" fill="#DDD6FE" font-size="10" font-family="sans-serif">Mempercepat keputusan &amp; tugas</text>
+
+                    <path d="M102 98V124H297V98" stroke="#F59E0B" stroke-width="2" stroke-dasharray="4 4"/>
+                    <path d="M200 124V142" stroke="#E11D48" stroke-width="2.5"/>
+
+                    <rect x="44" y="142" width="312" height="56" rx="14" fill="#312E81" stroke="#FBBF24" stroke-width="1.5"/>
+                    <text x="200" y="166" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="bold" font-family="sans-serif">CONTINUOUS CRO &amp; USER-CENTERED UX</text>
+                    <text x="200" y="185" text-anchor="middle" fill="#FCD34D" font-size="10" font-family="sans-serif">Akuisisi • Retensi • Kepuasan Lintas Perangkat</text>
+                  </svg>
+
+                  <div class="mt-5 pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-3">
+                    <div class="text-xs">
+                      <p class="font-bold text-white">Kanal Langsung Strategi Digital</p>
+                      <p class="text-slate-300">WA: 0838-9908-2895 • priscasr3@gmail.com</p>
+                    </div>
+                    <button type="button" onclick="openInquiryModal('hero_card_cta')" class="px-3.5 py-2 rounded-xl cta-gradient text-white text-xs font-bold cursor-pointer">
+                      Kirim Pertanyaan
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Badge Mengambang Mobile-First -->
+              <div class="animate-float hidden sm:flex absolute -left-5 top-6 bg-white/95 backdrop-blur-md p-3 rounded-2xl shadow-luxe border border-royal-100 items-center gap-2.5 max-w-[230px]">
+                <div class="w-9 h-9 rounded-xl bg-royal-100 text-royal-600 flex items-center justify-center shrink-0">
+                  <i class="fa-solid fa-mobile-screen-button text-base" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <p class="text-xs font-bold text-midnight-900">Mobile-First Priority</p>
+                  <p class="text-[10px] text-slate-600 leading-tight">Lebih dari 50% trafik berasal dari perangkat seluler</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 3. INTERACTIVE "ONLINE CUSTOMER EXPERIENCE PYRAMID" (CHAPTER 10)    -->
+    <!-- ===================================================================== -->
+    <section id="piramida-pengalaman" class="py-16 sm:py-24 bg-white border-y border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-rosebrand-600">Chapter 10 • Success Factors</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-midnight-900 mt-2">Online Customer Experience Pyramid</h2>
+          <p class="text-sm sm:text-base text-slate-600 mt-3">
+            Klik setiap pilar piramida pengalaman pelanggan online di bawah ini untuk melihat bagaimana elemen tersebut mendorong <strong>akuisisi</strong>, <strong>retensi</strong>, dan <strong>loyalitas</strong>.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <!-- Daftar Pilar Interaktif -->
+          <div class="lg:col-span-5 space-y-3" role="tablist" aria-label="Pilar Online Customer Experience Pyramid">
+            <button type="button" onclick="selectPyramidPillar('product', this)" data-pillar="product" class="pyramid-btn w-full p-4 rounded-2xl border-2 border-rosebrand-600 bg-rosebrand-50/60 text-left transition-all flex items-center justify-between gap-3 cursor-pointer">
+              <div>
+                <span class="text-[10px] font-extrabold uppercase tracking-wider text-rosebrand-600">Pilar 01 • Penawaran &amp; Kesesuaian</span>
+                <p class="font-serif text-base font-bold text-midnight-900">Product, Price/Promotions &amp; Journey Fit</p>
+              </div>
+              <i class="fa-solid fa-chevron-right text-rosebrand-600" aria-hidden="true"></i>
+            </button>
+
+            <button type="button" onclick="selectPyramidPillar('service', this)" data-pillar="service" class="pyramid-btn w-full p-4 rounded-2xl border border-slate-200 hover:border-royal-400 bg-slate-50 text-left transition-all flex items-center justify-between gap-3 cursor-pointer">
+              <div>
+                <span class="text-[10px] font-extrabold uppercase tracking-wider text-royal-600">Pilar 02 • Eksekusi Layanan</span>
+                <p class="font-serif text-base font-bold text-midnight-900">Service &amp; Fulfilment</p>
+              </div>
+              <i class="fa-solid fa-chevron-right text-slate-400" aria-hidden="true"></i>
+            </button>
+
+            <button type="button" onclick="selectPyramidPillar('design', this)" data-pillar="design" class="pyramid-btn w-full p-4 rounded-2xl border border-slate-200 hover:border-royal-400 bg-slate-50 text-left transition-all flex items-center justify-between gap-3 cursor-pointer">
+              <div>
+                <span class="text-[10px] font-extrabold uppercase tracking-wider text-royal-600">Pilar 03 • Persepsi &amp; Nilai</span>
+                <p class="font-serif text-base font-bold text-midnight-900">Design &amp; Emotional/Rational Values</p>
+              </div>
+              <i class="fa-solid fa-chevron-right text-slate-400" aria-hidden="true"></i>
+            </button>
+
+            <button type="button" onclick="selectPyramidPillar('usability', this)" data-pillar="usability" class="pyramid-btn w-full p-4 rounded-2xl border border-slate-200 hover:border-royal-400 bg-slate-50 text-left transition-all flex items-center justify-between gap-3 cursor-pointer">
+              <div>
+                <span class="text-[10px] font-extrabold uppercase tracking-wider text-royal-600">Pilar 04 • Kemudahan &amp; Inklusi</span>
+                <p class="font-serif text-base font-bold text-midnight-900">Usability &amp; Accessibility</p>
+              </div>
+              <i class="fa-solid fa-chevron-right text-slate-400" aria-hidden="true"></i>
+            </button>
+
+            <button type="button" onclick="selectPyramidPillar('trust', this)" data-pillar="trust" class="pyramid-btn w-full p-4 rounded-2xl border border-slate-200 hover:border-royal-400 bg-slate-50 text-left transition-all flex items-center justify-between gap-3 cursor-pointer">
+              <div>
+                <span class="text-[10px] font-extrabold uppercase tracking-wider text-royal-600">Pilar 05 • Kredibilitas &amp; Bukti</span>
+                <p class="font-serif text-base font-bold text-midnight-900">Trust &amp; Credibility</p>
+              </div>
+              <i class="fa-solid fa-chevron-right text-slate-400" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <!-- Panel Penjelasan Dinamis Pilar Terpilih -->
+          <div class="lg:col-span-7 bg-midnight-900 text-white rounded-3xl p-6 sm:p-8 shadow-luxe">
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-white/10">
+              <span id="pillar-badge" class="px-3 py-1 rounded-full bg-rosebrand-600 text-white text-xs font-bold uppercase tracking-wider">
+                Pilar 01 • Penawaran &amp; Kesesuaian
+              </span>
+              <span class="text-xs font-semibold text-champagne-300">Chapter 10 Framework</span>
+            </div>
+
+            <h3 id="pillar-title" class="font-serif text-2xl sm:text-3xl font-bold text-white mt-5">
+              Product, Price/Promotions &amp; Journey Fit
+            </h3>
+            <p id="pillar-summary" class="text-sm sm:text-base text-slate-300 mt-3 leading-relaxed">
+              Menyelaraskan proposisi nilai, struktur harga/promosi, serta alur perjalanan pelanggan (awareness, pertimbangan, hingga aksi) agar relevan dengan kebutuhan audiens di setiap titik kontak digital.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
+              <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                <p class="text-[11px] font-extrabold uppercase tracking-wider text-champagne-400">Akuisisi</p>
+                <p id="pillar-acquisition" class="text-xs sm:text-sm text-slate-200 mt-1.5 leading-relaxed">
+                  Pesan promosi dan penawaran yang selaras dengan niat pencarian atau kampanye menarik klik berkualitas.
+                </p>
+              </div>
+              <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                <p class="text-[11px] font-extrabold uppercase tracking-wider text-rosebrand-300">Retensi</p>
+                <p id="pillar-retention" class="text-xs sm:text-sm text-slate-200 mt-1.5 leading-relaxed">
+                  Kesesuaian alur lanjutan (<em>journey fit</em>) membuat pengguna kembali tanpa kebingungan navigasi.
+                </p>
+              </div>
+              <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                <p class="text-[11px] font-extrabold uppercase tracking-wider text-royal-200">Loyalitas</p>
+                <p id="pillar-loyalty" class="text-xs sm:text-sm text-slate-200 mt-1.5 leading-relaxed">
+                  Nilai yang konsisten dan transparan membangun advokasi jangka panjang terhadap merek.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 4. WEBSITE DESIGN & REDESIGN PROJECT PLANNING & DEVELOPMENT PROCESS    -->
+    <!-- ===================================================================== -->
+    <section id="tahapan-proyek" class="py-16 sm:py-24 bg-gradient-to-br from-royal-50/75 via-white to-rosebrand-50/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+          <div>
+            <span class="text-xs font-extrabold uppercase tracking-widest text-royal-600">Chapter 10 • Project &amp; Development Roadmap</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-midnight-900 mt-2">Perencanaan Proyek &amp; Proses Pengembangan Situs</h2>
+            <p class="text-sm sm:text-base text-slate-600 mt-2 max-w-2xl">
+              Menghindari kesalahan umum melompat ke desain tanpa perencanaan terstruktur—menggabungkan aktivitas utama, dukungan, inisiasi, domain, dan performa hosting.
+            </p>
+          </div>
+
+          <!-- Tab Fase -->
+          <div class="flex flex-wrap gap-2" role="tablist" aria-label="Fase Perencanaan dan Pengembangan Proyek">
+            <button type="button" onclick="selectProjectPhase('initiation', this)" data-phase="initiation" class="phase-btn px-4 py-2.5 rounded-xl text-xs font-bold bg-midnight-900 text-white cursor-pointer">
+              1. Initiation, Domain &amp; Hosting
+            </button>
+            <button type="button" onclick="selectProjectPhase('development', this)" data-phase="development" class="phase-btn px-4 py-2.5 rounded-xl text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-royal-50 cursor-pointer">
+              2. Main Development Activities
+            </button>
+            <button type="button" onclick="selectProjectPhase('support', this)" data-phase="support" class="phase-btn px-4 py-2.5 rounded-xl text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-royal-50 cursor-pointer">
+              3. Key Support &amp; Ongoing CRO
+            </button>
+          </div>
+        </div>
+
+        <div id="project-phase-panel" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-card"></div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 5. DEFINING REQUIREMENTS, UX DESIGN, EVALUATION & CRO SIMULATOR      -->
+    <!-- ===================================================================== -->
+    <section id="ux-cro" class="py-16 sm:py-24 bg-white border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-rosebrand-600">Chapter 10 • Requirements, IA, UX &amp; Evaluation</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-midnight-900 mt-2">Arsitektur Informasi, Evaluasi Usabilitas &amp; Simulasi CRO</h2>
+          <p class="text-sm sm:text-base text-slate-600 mt-3">
+            Memadukan kerangka <strong>4 Tahap Desain Situs (Rosenfeld &amp; Morville)</strong>, evaluasi <strong>Bevan (Effectiveness, Productivity/Efficiency, Satisfaction)</strong>, <strong>Web Accessibility</strong>, dan <strong>Responsive Mobile Design</strong>.
+          </p>
+        </div>
+
+        <!-- Ringkasan Kerangka Utama -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+          <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200">
+            <span class="inline-block px-2.5 py-1 rounded-lg bg-royal-100 text-royal-700 text-[11px] font-bold">Rosenfeld &amp; Morville (4 Tahap)</span>
+            <h3 class="font-serif text-lg font-bold text-midnight-900 mt-2.5">Tahapan Desain Berbasis Pengguna</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+              (1) Identifikasi kelompok audiens, (2) Peringkat kepentingan bagi bisnis, (3) Tiga kebutuhan informasi utama tiap audiens, dan (4) <em>Wish list</em> langsung dari perwakilan audiens.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200">
+            <span class="inline-block px-2.5 py-1 rounded-lg bg-rosebrand-100 text-rosebrand-700 text-[11px] font-bold">Evaluasi Usabilitas (Bevan)</span>
+            <h3 class="font-serif text-lg font-bold text-midnight-900 mt-2.5">Effectiveness, Efficiency &amp; Satisfaction</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+              Mengukur ketepatan &amp; kelengkapan penyelesaian tugas (<em>Effectiveness</em>), kecepatan waktu penyelesaian tugas (<em>Productivity/Efficiency</em>), serta kepuasan interaksi pengguna (<em>Satisfaction</em>).
+            </p>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200">
+            <span class="inline-block px-2.5 py-1 rounded-lg bg-midnight-900 text-champagne-400 text-[11px] font-bold">Accessibility, IA &amp; Mobile</span>
+            <h3 class="font-serif text-lg font-bold text-midnight-900 mt-2.5">Aksesibilitas, Arsitektur &amp; Responsif</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+              Struktur organisasi, pelabelan, dan navigasi (<em>Information Architecture</em>) yang jelas, aksesibel lintas peramban/kebutuhan khusus, serta tata letak responsif untuk dominasi trafik seluler.
+            </p>
+          </div>
+        </div>
+
+        <!-- Interactive CRO & UX Readiness Checklist / Impact Simulator (Tanpa Produk) -->
+        <div class="bg-gradient-to-br from-midnight-900 via-royal-900 to-midnight-950 text-white rounded-3xl p-6 sm:p-8 shadow-luxe">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-7 space-y-4">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="px-3 py-1 rounded-full bg-champagne-500 text-midnight-950 text-[11px] font-extrabold uppercase tracking-wider">
+                  Interactive CRO &amp; UX Readiness Simulator
+                </span>
+                <span class="text-xs text-slate-300">Centang praktik yang telah diterapkan</span>
+              </div>
+              <h3 class="font-serif text-2xl font-bold">Simulasi Kesiapan Pengalaman Online &amp; Konversi</h3>
+              <p class="text-xs sm:text-sm text-slate-300">
+                Uji tingkat kesiapan digital marketing &amp; UX situs Anda berdasarkan prinsip Chapter 10 untuk melihat estimasi peningkatan efisiensi tugas dan potensi konversi.
+              </p>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                <label class="flex items-start gap-2.5 p-3 rounded-2xl bg-white/5 border border-white/10 hover:border-champagne-400/60 cursor-pointer text-xs sm:text-sm">
+                  <input type="checkbox" checked data-ux-gain="18" onchange="recalculateUxSimulator()" class="ux-check accent-rosebrand-500 w-4 h-4 mt-0.5 rounded" />
+                  <span><strong>Mobile-First Responsive Layout</strong> (&gt;50% trafik seluler mulus tanpa geser horizontal)</span>
+                </label>
+
+                <label class="flex items-start gap-2.5 p-3 rounded-2xl bg-white/5 border border-white/10 hover:border-champagne-400/60 cursor-pointer text-xs sm:text-sm">
+                  <input type="checkbox" checked data-ux-gain="16" onchange="recalculateUxSimulator()" class="ux-check accent-rosebrand-500 w-4 h-4 mt-0.5 rounded" />
+                  <span><strong>Clear Information Architecture</strong> (navigasi, label &amp; tujuan halaman mudah ditemukan)</span>
+                </label>
+
+                <label class="flex items-start gap-2.5 p-3 rounded-2xl bg-white/5 border border-white/10 hover:border-champagne-400/60 cursor-pointer text-xs sm:text-sm">
+                  <input type="checkbox" data-ux-gain="15" onchange="recalculateUxSimulator()" class="ux-check accent-rosebrand-500 w-4 h-4 mt-0.5 rounded" />
+                  <span><strong>Web Accessibility &amp; Contrast</strong> (kontras jelas, fokus keyboard &amp; kompatibel lintas browser)</span>
+                </label>
+
+                <label class="flex items-start gap-2.5 p-3 rounded-2xl bg-white/5 border border-white/10 hover:border-champagne-400/60 cursor-pointer text-xs sm:text-sm">
+                  <input type="checkbox" data-ux-gain="17" onchange="recalculateUxSimulator()" class="ux-check accent-rosebrand-500 w-4 h-4 mt-0.5 rounded" />
+                  <span><strong>Continuous CRO &amp; Speed</strong> (pengujian eksperimen rutin, domain tepat &amp; hosting cepat)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Panel Hasil Simulasi -->
+            <div class="lg:col-span-5 bg-midnight-950/80 border border-white/15 rounded-2xl p-6 space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold uppercase tracking-wider text-champagne-400">Indeks Kesiapan UX &amp; CRO</span>
+                <span id="ux-readiness-score" class="font-serif text-3xl font-bold text-white">34%</span>
+              </div>
+
+              <div class="w-full h-3 rounded-full bg-white/10 overflow-hidden">
+                <div id="ux-progress-bar" class="h-full cta-gradient transition-all duration-300" style="width: 34%;"></div>
+              </div>
+
+              <p id="ux-readiness-status" class="text-xs sm:text-sm text-rosebrand-200 font-medium">
+                Fondasi awal aktif—lengkapi aksesibilitas dan pengujian CRO berkelanjutan untuk hasil optimal.
+              </p>
+
+              <div class="pt-2 border-t border-white/10 flex items-center justify-between text-xs">
+                <span class="text-slate-400">Estimasi Peningkatan Efisiensi:</span>
+                <span id="ux-efficiency-lift" class="font-bold text-champagne-300">+14% Task Speed</span>
+              </div>
+
+              <button type="button" onclick="openInquiryModal('ux_simulator')" class="w-full py-3 px-4 rounded-xl cta-gradient text-white text-xs font-bold flex items-center justify-center gap-2 shadow-glow-rose cursor-pointer">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                <span>Konsultasikan Hasil Simulasi Ini</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 6. DIRECT CONSULTATION & INQUIRY SECTION + TEORI CH. 10               -->
+    <!-- ===================================================================== -->
+    <section id="teori-ch10" class="py-16 sm:py-24 bg-slate-50 border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <!-- Kolom Kiri: Formulir Pertanyaan / Brief Langsung ke WA & Email -->
+          <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-card">
+            <span class="text-xs font-extrabold uppercase tracking-widest text-rosebrand-600">Direct Digital Marketing Inquiry</span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-midnight-900 mt-2">Kirim Pertanyaan atau Brief Strategi Digital</h2>
+            <p class="text-xs sm:text-sm text-slate-600 mt-2">
+              Pesan otomatis menyertakan jejak kanal/UTM untuk analisis kampanye dan dikirim langsung ke WhatsApp (<strong>0838-9908-2895</strong>) atau Email (<strong>priscasr3@gmail.com</strong>).
+            </p>
+
+            <form id="direct-inquiry-form" onsubmit="event.preventDefault(); sendDirectInquiry('whatsapp');" class="mt-6 space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="inq-name" class="block text-xs font-bold text-midnight-900 mb-1">Nama Lengkap *</label>
+                  <input type="text" id="inq-name" required placeholder="Nama Anda" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm bg-slate-50/60" />
+                </div>
+                <div>
+                  <label for="inq-org" class="block text-xs font-bold text-midnight-900 mb-1">Organisasi / Brand / Proyek *</label>
+                  <input type="text" id="inq-org" required placeholder="Nama brand atau topik diskusi" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm bg-slate-50/60" />
+                </div>
+              </div>
+
+              <div>
+                <label for="inq-topic" class="block text-xs font-bold text-midnight-900 mb-1">Fokus Topik Chapter 10 &amp; Digital Marketing</label>
+                <select id="inq-topic" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm bg-white font-medium text-midnight-900">
+                  <option value="Online Customer Experience Pyramid &amp; Nilai Pelanggan">Online Customer Experience Pyramid &amp; Nilai Pelanggan</option>
+                  <option value="Perencanaan Proyek, Domain (.id/.com) &amp; Hosting">Perencanaan Proyek, Domain (.id/.com) &amp; Hosting</option>
+                  <option value="User-Centered Design, IA &amp; Web Accessibility">User-Centered Design, IA &amp; Web Accessibility</option>
+                  <option value="Evaluasi Usabilitas (Bevan) &amp; Continuous CRO">Evaluasi Usabilitas (Bevan) &amp; Continuous CRO</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="inq-message" class="block text-xs font-bold text-midnight-900 mb-1">Pesan / Kebutuhan Diskusi *</label>
+                <textarea id="inq-message" rows="3" required placeholder="Tuliskan pertanyaan atau tujuan pengalaman digital yang ingin dicapai..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm bg-slate-50/60"></textarea>
+              </div>
+
+              <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                <button type="submit" class="flex-1 py-3.5 px-5 rounded-2xl cta-gradient text-white font-bold text-xs sm:text-sm shadow-glow-rose flex items-center justify-center gap-2 cursor-pointer">
+                  <i class="fa-brands fa-whatsapp text-base" aria-hidden="true"></i>
+                  <span>Kirim Otomatis ke WhatsApp (0838-9908-2895)</span>
+                </button>
+                <button type="button" onclick="sendDirectInquiry('email')" class="flex-1 py-3.5 px-5 rounded-2xl bg-midnight-900 hover:bg-royal-700 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 cursor-pointer">
+                  <i class="fa-solid fa-envelope text-champagne-400" aria-hidden="true"></i>
+                  <span>Kirim Otomatis ke Email (priscasr3@gmail.com)</span>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Kolom Kanan: Ringkasan Chapter 10 & Akses Modal Teori -->
+          <div class="lg:col-span-5 bg-midnight-900 text-white rounded-3xl p-6 sm:p-8 shadow-luxe space-y-5">
+            <span class="px-3 py-1 rounded-full bg-royal-700 text-royal-100 text-xs font-bold">Chapter 10 Summary</span>
+            <h3 class="font-serif text-2xl font-bold">Intisari Delivering the Online Customer Experience</h3>
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300 list-disc pl-5 leading-relaxed">
+              <li>Pengalaman digital memadukan faktor <strong>rasional</strong> dan <strong>emosional</strong> untuk mendorong akuisisi, retensi, dan loyalitas.</li>
+              <li>Perencanaan situs menuntut pendekatan terstruktur dan iteratif (<em>prototyping</em>, inisiasi, domain &amp; hosting, hingga CRO berkelanjutan).</li>
+              <li>Desain wajib <strong>user-centered</strong> dengan arsitektur informasi, aksesibilitas, dan kesiapan <strong>mobile (&gt;50% trafik)</strong> yang kokoh.</li>
+            </ul>
+
+            <div class="pt-3 border-t border-white/10 space-y-2.5">
+              <button type="button" onclick="openTheoryModal()" class="w-full py-3 px-4 rounded-xl bg-white hover:bg-royal-50 text-midnight-900 font-bold text-xs sm:text-sm flex items-center justify-center gap-2 cursor-pointer">
+                <i class="fa-solid fa-layer-group text-royal-600" aria-hidden="true"></i>
+                <span>Buka Ringkasan Lengkap Teori Chapter 10</span>
+              </button>
+              <div class="flex items-center justify-between text-xs text-slate-300 pt-1">
+                <a href="https://wa.me/6283899082895?text=Halo%20Bhinneka%20Digital%20Pulse!%20Saya%20ingin%20berdiskusi%20tentang%20Digital%20Marketing%20Chapter%2010." target="_blank" rel="noopener noreferrer" class="hover:text-rosebrand-300 font-semibold">
+                  <i class="fa-brands fa-whatsapp mr-1 text-rosebrand-400" aria-hidden="true"></i>0838-9908-2895
+                </a>
+                <a href="mailto:priscasr3@gmail.com?subject=Diskusi%20Bhinneka%20Digital%20Pulse%20(Chapter%2010)" class="hover:text-champagne-300 font-semibold">
+                  <i class="fa-solid fa-envelope mr-1 text-champagne-400" aria-hidden="true"></i>priscasr3@gmail.com
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================================================== -->
+  <!-- FOOTER & MOBILE QUICK ACTION BAR                                      -->
+  <!-- ===================================================================== -->
+  <footer class="bg-midnight-950 text-slate-300 py-10 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+      <div class="flex items-center gap-2.5">
+        <span class="font-serif text-base font-bold text-white">Bhinneka Digital Pulse</span>
+        <span class="text-slate-500">•</span>
+        <span class="text-slate-400">Digital Marketing — Chapter 10</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-4 text-slate-400">
+        <a href="https://wa.me/6283899082895?text=Halo%20Bhinneka%20Digital%20Pulse!" target="_blank" rel="noopener noreferrer" class="hover:text-white">WA: 0838-9908-2895</a>
+        <a href="mailto:priscasr3@gmail.com" class="hover:text-white">priscasr3@gmail.com</a>
+        <span>© <span id="year-now">2026</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Quick Action Bar -->
+  <div class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 px-3 py-2.5 flex items-center gap-2 shadow-2xl">
+    <button type="button" onclick="openTheoryModal()" class="flex-1 py-2.5 px-3 rounded-xl bg-royal-50 text-royal-700 border border-royal-200 font-bold text-xs flex items-center justify-center gap-1.5 cursor-pointer">
+      <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+      <span>Teori Ch. 10</span>
+    </button>
+    <a href="mailto:priscasr3@gmail.com?subject=Konsultasi%20Bhinneka%20Digital%20Pulse" class="py-2.5 px-3.5 rounded-xl bg-midnight-900 text-champagne-400 font-bold text-xs flex items-center justify-center" aria-label="Email ke priscasr3@gmail.com">
+      <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+    </a>
+    <a href="https://wa.me/6283899082895?text=Halo%20Bhinneka%20Digital%20Pulse!%20Saya%20ingin%20konsultasi%20Digital%20Marketing." target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-3 rounded-xl cta-gradient text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm">
+      <i class="fa-brands fa-whatsapp text-sm" aria-hidden="true"></i>
+      <span>Chat WA</span>
+    </a>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL KONSULTASI / BRIEF LANGSUNG (WA & EMAIL)                        -->
+  <!-- ===================================================================== -->
+  <div id="inquiry-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="inquiry-modal-title">
+    <div class="absolute inset-0 bg-midnight-950/70 backdrop-blur-xs" onclick="closeInquiryModal()"></div>
+    <div class="relative bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 sm:p-7 shadow-2xl border border-slate-200">
+      <div class="flex items-start justify-between gap-3 pb-4 border-b border-slate-200">
+        <div>
+          <span class="px-2.5 py-1 rounded-full bg-rosebrand-100 text-rosebrand-700 text-[11px] font-extrabold">Konsultasi &amp; Brief Digital Marketing</span>
+          <h3 id="inquiry-modal-title" class="font-serif text-xl sm:text-2xl font-bold text-midnight-900 mt-1.5">Hubungi Bhinneka Digital Pulse</h3>
+        </div>
+        <button type="button" onclick="closeInquiryModal()" class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 text-midnight-900 flex items-center justify-center shrink-0 cursor-pointer" aria-label="Tutup Modal Konsultasi">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="py-4 space-y-3.5">
+        <div>
+          <label for="modal-inq-name" class="block text-xs font-bold text-midnight-900 mb-1">Nama Anda *</label>
+          <input type="text" id="modal-inq-name" placeholder="Nama lengkap" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm" />
+        </div>
+        <div>
+          <label for="modal-inq-focus" class="block text-xs font-bold text-midnight-900 mb-1">Topik Diskusi</label>
+          <select id="modal-inq-focus" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm bg-white">
+            <option value="Online Customer Experience &amp; Nilai Pelanggan">Online Customer Experience &amp; Nilai Pelanggan</option>
+            <option value="Perencanaan Proyek, Domain &amp; Performa Hosting">Perencanaan Proyek, Domain &amp; Performa Hosting</option>
+            <option value="Desain UX, IA, Aksesibilitas &amp; Evaluasi Usabilitas">Desain UX, IA, Aksesibilitas &amp; Evaluasi Usabilitas</option>
+            <option value="Mobile-First &amp; Continuous CRO">Mobile-First &amp; Continuous CRO</option>
+          </select>
+        </div>
+        <div>
+          <label for="modal-inq-note" class="block text-xs font-bold text-midnight-900 mb-1">Catatan Singkat *</label>
+          <textarea id="modal-inq-note" rows="3" placeholder="Jelaskan konteks atau pertanyaan Anda..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm"></textarea>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2">
+          <button type="button" onclick="submitModalInquiry('whatsapp')" class="py-3 px-4 rounded-xl cta-gradient text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shadow-glow-rose cursor-pointer">
+            <i class="fa-brands fa-whatsapp text-base" aria-hidden="true"></i>
+            <span>Kirim ke WhatsApp</span>
+          </button>
+          <button type="button" onclick="submitModalInquiry('email')" class="py-3 px-4 rounded-xl bg-midnight-900 hover:bg-royal-700 text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 cursor-pointer">
+            <i class="fa-solid fa-envelope text-champagne-400" aria-hidden="true"></i>
+            <span>Kirim ke Email</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL RINGKASAN TEORI CHAPTER 10                                      -->
+  <!-- ===================================================================== -->
+  <div id="theory-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="theory-modal-title">
+    <div class="absolute inset-0 bg-midnight-950/70 backdrop-blur-xs" onclick="closeTheoryModal()"></div>
+    <div class="relative bg-white rounded-3xl max-w-3xl w-full max-h-[88vh] overflow-y-auto p-6 sm:p-8 shadow-2xl border border-slate-200">
+      <div class="flex items-start justify-between gap-4 pb-4 border-b border-slate-200">
+        <div>
+          <span class="px-3 py-1 rounded-full bg-royal-100 text-royal-700 text-xs font-extrabold">Chapter 10: Delivering the Online Customer Experience</span>
+          <h3 id="theory-modal-title" class="font-serif text-2xl font-bold text-midnight-900 mt-2">Ringkasan Konsep Utama Modul Chapter 10</h3>
+        </div>
+        <button type="button" onclick="closeTheoryModal()" class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 text-midnight-900 flex items-center justify-center shrink-0 cursor-pointer" aria-label="Tutup Modal Ringkasan Chapter 10">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="py-5 space-y-4 text-sm text-slate-700">
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+          <h4 class="font-bold text-midnight-900">1. Piramida Pengalaman Pelanggan Online &amp; Keseimbangan Nilai</h4>
+          <p class="mt-1 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Memadukan aspek rasional (relevansi, kecepatan, kejelasan informasi, struktur harga) dan emosional (gaya visual, nada komunikasi, kepercayaan, dan kredibilitas) di seluruh perjalanan pengguna.
+          </p>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+          <h4 class="font-bold text-midnight-900">2. Inisiasi Proyek, Domain, Hosting &amp; Aktivitas Pengembangan</h4>
+          <p class="mt-1 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Dimulai dari tinjauan biaya-manfaat, anggaran, jadwal, pemilihan domain strategis (<code>gTLD</code> seperti <code>.com</code> dan <code>ccTLD</code> seperti <code>.id</code>), performa &amp; ketersediaan hosting, hingga proses iteratif dan CRO berkelanjutan.
+          </p>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+          <h4 class="font-bold text-midnight-900">3. Kebutuhan Pengguna, IA, Aksesibilitas &amp; Evaluasi (Bevan)</h4>
+          <p class="mt-1 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Berpusat pada pengguna (<em>user-centered design</em>), empat tahap desain Rosenfeld &amp; Morville, arsitektur informasi (organisasi, pelabelan, navigasi), aksesibilitas lintas peramban/kebutuhan khusus, responsivitas seluler (&gt;50% trafik), serta evaluasi <em>Effectiveness</em>, <em>Productivity/Efficiency</em>, dan <em>Satisfaction</em>.
+          </p>
+        </div>
+      </div>
+
+      <div class="pt-4 border-t border-slate-200 flex justify-end">
+        <button type="button" onclick="closeTheoryModal()" class="px-5 py-2.5 rounded-xl bg-midnight-900 text-white text-xs font-bold hover:bg-royal-700 cursor-pointer">
+          Tutup Ringkasan
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- TOAST NOTIFICATION BOX (Pengganti alert())                            -->
+  <!-- ===================================================================== -->
+  <div id="toast-box" class="fixed top-20 right-4 z-[60] hidden items-center gap-3 bg-midnight-900 text-white px-4 py-3 rounded-2xl shadow-luxe border border-royal-400/40 max-w-xs sm:max-w-sm" role="status" aria-live="polite">
+    <i id="toast-icon" class="fa-solid fa-circle-check text-champagne-400 text-base" aria-hidden="true"></i>
+    <p id="toast-message" class="text-xs sm:text-sm font-medium"></p>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- JAVASCRIPT INTERAKTIF (Piramida, Tahapan Proyek, UX/CRO Sim, WA/Email) -->
+  <!-- ===================================================================== -->
+  <script>
+    const CONTACT_WHATSAPP = "6283899082895";
+    const CONTACT_EMAIL = "priscasr3@gmail.com";
+    let activeInquirySource = "landing_page";
+
+    // Atribusi kanal & UTM otomatis untuk setiap pengiriman pesan
+    function getChannelAttribution(sourceLabel = "direct_cta") {
+      try {
+        const params = new URLSearchParams(window.location.search);
+        const utmSource = params.get("utm_source") || (document.referrer ? new URL(document.referrer).hostname : "direct_web");
+        const utmMedium = params.get("utm_medium") || "landing_page";
+        const utmCampaign = params.get("utm_campaign") || "ch10_bhinneka_digital_pulse";
+        return `source=${utmSource} | medium=${utmMedium} | campaign=${utmCampaign} | cta=${sourceLabel}`;
+      } catch (e) {
+        return `source=direct_web | medium=landing_page | campaign=ch10_bhinneka_digital_pulse | cta=${sourceLabel}`;
+      }
+    }
+
+    // Data interaktif 5 Pilar Online Customer Experience Pyramid (Chapter 10)
+    const pyramidPillars = {
+      product: {
+        badge: "Pilar 01 • Penawaran & Kesesuaian",
+        title: "Product, Price/Promotions & Journey Fit",
+        summary: "Menyelaraskan proposisi nilai, struktur harga/promosi, serta alur perjalanan pelanggan agar sesuai dengan kebutuhan audiens di setiap tahap interaksi digital.",
+        acquisition: "Penawaran dan promosi yang relevan dengan intensi audiens meningkatkan rasio klik dan ketertarikan awal.",
+        retention: "Kesesuaian langkah lanjutan (journey fit) membantu pengguna mencapai tujuan tanpa hambatan alur.",
+        loyalty: "Konsistensi nilai dan transparansi penawaran memperkuat kepercayaan jangka panjang."
+      },
+      service: {
+        badge: "Pilar 02 • Eksekusi Layanan",
+        title: "Service & Fulfilment",
+        summary: "Memastikan layanan pendukung, respons komunikasi, dan pemenuhan janji digital berjalan andal setelah pengguna berinteraksi atau mengajukan permintaan.",
+        acquisition: "Jaminan layanan yang jelas mengurangi keraguan calon pengguna pada tahap awal.",
+        retention: "Pemenuhan layanan yang tepat waktu mendorong kunjungan berulang dan penggunaan berkelanjutan.",
+        loyalty: "Pengalaman pemenuhan yang melampaui ekspektasi mengubah pengguna menjadi pendukung merek."
+      },
+      design: {
+        badge: "Pilar 03 • Persepsi & Nilai",
+        title: "Design & Emotional/Rational Values",
+        summary: "Menggabungkan desain visual, gaya, dan nada komunikasi (emosional) dengan kejelasan struktur, relevansi, dan kecepatan (rasional).",
+        acquisition: "Estetika visual dan pesan yang terarah menarik perhatian pada detik-detik awal kunjungan.",
+        retention: "Keseimbangan antara daya tarik visual dan kemudahan pemahaman menjaga kenyamanan berinteraksi.",
+        loyalty: "Identitas visual yang khas dan berkarakter memperkuat ingatan merek di benak audiens."
+      },
+      usability: {
+        badge: "Pilar 04 • Kemudahan & Inklusi",
+        title: "Usability & Accessibility",
+        summary: "Memastikan situs dapat digunakan secara efektif, efisien, dan memuaskan oleh berbagai pengguna termasuk aksesibilitas lintas peramban dan kebutuhan khusus.",
+        acquisition: "Navigasi dan tata letak responsif—terutama di perangkat seluler (>50% trafik)—mencegah bounce dini.",
+        retention: "Alur interaksi yang intuitif dan inklusif memudahkan pengguna menyelesaikan tugas berulang.",
+        loyalty: "Standar aksesibilitas dan kemudahan penggunaan menunjukkan kepedulian menyeluruh terhadap semua pengunjung."
+      },
+      trust: {
+        badge: "Pilar 05 • Kredibilitas & Bukti",
+        title: "Trust & Credibility",
+        summary: "Membangun rasa aman dan kredibilitas melalui informasi yang jelas, keandalan sistem, serta konsistensi antara janji kampanye dan pengalaman aktual.",
+        acquisition: "Sinyal kredibilitas yang kuat meningkatkan keyakinan pengunjung untuk mengambil tindakan pertama.",
+        retention: "Kejelasan informasi dan keandalan pengalaman memelihara rasa aman sepanjang hubungan digital.",
+        loyalty: "Kepercayaan yang terjaga menjadi fondasi utama loyalitas dan rekomendasi organik."
+      }
+    };
+
+    function selectPyramidPillar(key, btnEl) {
+      const data = pyramidPillars[key];
+      if (!data) return;
+
+      document.querySelectorAll(".pyramid-btn").forEach(btn => {
+        btn.classList.remove("border-2", "border-rosebrand-600", "bg-rosebrand-50/60");
+        btn.classList.add("border", "border-slate-200", "bg-slate-50");
+        const icon = btn.querySelector("i");
+        if (icon) {
+          icon.classList.remove("text-rosebrand-600");
+          icon.classList.add("text-slate-400");
+        }
+      });
+
+      if (btnEl) {
+        btnEl.classList.remove("border", "border-slate-200", "bg-slate-50");
+        btnEl.classList.add("border-2", "border-rosebrand-600", "bg-rosebrand-50/60");
+        const icon = btnEl.querySelector("i");
+        if (icon) {
+          icon.classList.remove("text-slate-400");
+          icon.classList.add("text-rosebrand-600");
+        }
+      }
+
+      document.getElementById("pillar-badge").textContent = data.badge;
+      document.getElementById("pillar-title").textContent = data.title;
+      document.getElementById("pillar-summary").textContent = data.summary;
+      document.getElementById("pillar-acquisition").textContent = data.acquisition;
+      document.getElementById("pillar-retention").textContent = data.retention;
+      document.getElementById("pillar-loyalty").textContent = data.loyalty;
+    }
+
+    // Data Tahapan Proyek & Proses Pengembangan Situs (Chapter 10)
+    const projectPhases = {
+      initiation: {
+        title: "Fase Inisiasi, Pemilihan Domain & Performa Hosting",
+        subtitle: "Fondasi proyek melalui tinjauan biaya-manfaat, anggaran, tenggat target, domain strategis, dan keandalan hosting.",
+        cards: [
+          {
+            label: "Inisiasi Proyek",
+            heading: "Tinjauan Biaya-Manfaat & Persetujuan",
+            text: "Mengevaluasi biaya dan manfaat pengembangan atau perombakan besar situs untuk menghasilkan keputusan lanjut dengan anggaran disetujui dan target selesai yang jelas."
+          },
+          {
+            label: "Domain Name Selection",
+            heading: "gTLD (.com, .org, .net) vs ccTLD (.id, .co.uk)",
+            text: "Pemilihan nama domain merupakan keputusan strategis: gTLD untuk cakupan internasional dan ccTLD (seperti .id) untuk pasar spesifik negara."
+          },
+          {
+            label: "Hosting & Performance",
+            heading: "Performa & Ketersediaan (Availability)",
+            text: "Kualitas penyedia hosting berdampak langsung pada pengalaman pengguna, dengan dua faktor kritis: kecepatan performa dan ketersediaan layanan."
+          }
+        ]
+      },
+      development: {
+        title: "Aktivitas Utama Pengembangan Situs (Main Site Development)",
+        subtitle: "Alur terstruktur dari perumusan tujuan pemasaran hingga peluncuran dan pengembangan berkelanjutan.",
+        cards: [
+          {
+            label: "Langkah 1–2",
+            heading: "Marketing Objectives & Prepare Brief",
+            text: "Menetapkan sasaran pemasaran digital dan menyusun brief proyek yang jelas bersama pemangku kepentingan terkait."
+          },
+          {
+            label: "Langkah 3–5",
+            heading: "Market Research, Prototype & Develop Content",
+            text: "Melakukan riset pasar & kebutuhan pengguna, merancang prototipe alur/antarmuka, serta mengembangkan konten yang relevan."
+          },
+          {
+            label: "Langkah 6–8",
+            heading: "Test & Revise, Launch & Ongoing Development",
+            text: "Menguji dan memperbaiki sebelum peluncuran resmi, lalu melanjutkan penyempurnaan berkala mengikuti dinamika kebutuhan pengguna."
+          }
+        ]
+      },
+      support: {
+        title: "Aktivitas Pendukung Utama & Conversion Rate Optimization (CRO)",
+        subtitle: "Menyelaraskan komunikasi kampanye, promosi bertahap, dan eksperimen optimasi konversi berkelanjutan.",
+        cards: [
+          {
+            label: "Komunikasi & Pra-Promosi",
+            heading: "Communications Plan & Start Promotion",
+            text: "Menyusun rencana komunikasi terpadu dan memulai promosi awal untuk membangun kesiapan audiens menjelang peluncuran."
+          },
+          {
+            label: "Promosi Utama",
+            heading: "Main Promotion Lintas Kanal",
+            text: "Mengaktifkan dorongan promosi utama secara terkoordinasi agar trafik berkualitas terarah ke pengalaman digital yang telah disiapkan."
+          },
+          {
+            label: "Optimasi Konversi",
+            heading: "Continuous CRO & Eksperimen Rutin",
+            text: "Fokus modern bergeser ke penyempurnaan berkelanjutan dan Conversion Rate Optimization (CRO) melalui pengujian terukur secara rutin."
+          }
+        ]
+      }
+    };
+
+    function selectProjectPhase(phaseKey, btnEl) {
+      const phase = projectPhases[phaseKey];
+      const panel = document.getElementById("project-phase-panel");
+      if (!phase || !panel) return;
+
+      document.querySelectorAll(".phase-btn").forEach(btn => {
+        btn.classList.remove("bg-midnight-900", "text-white");
+        btn.classList.add("bg-white", "text-slate-700", "border", "border-slate-200");
+      });
+      if (btnEl) {
+        btnEl.classList.remove("bg-white", "text-slate-700", "border", "border-slate-200");
+        btnEl.classList.add("bg-midnight-900", "text-white");
+      }
+
+      panel.innerHTML = `
+        <div class="mb-6">
+          <h3 class="font-serif text-xl sm:text-2xl font-bold text-midnight-900">${phase.title}</h3>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1">${phase.subtitle}</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          ${phase.cards.map(c => `
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
+              <span class="inline-block px-2.5 py-0.5 rounded-full bg-royal-100 text-royal-700 text-[10px] font-extrabold uppercase">${c.label}</span>
+              <h4 class="font-serif text-base font-bold text-midnight-900 mt-2">${c.heading}</h4>
+              <p class="text-xs sm:text-sm text-slate-600 mt-1.5 leading-relaxed">${c.text}</p>
+            </div>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    // Simulasi Kesiapan UX & CRO
+    function recalculateUxSimulator() {
+      const checks = Array.from(document.querySelectorAll(".ux-check:checked"));
+      const score = checks.reduce((sum, el) => sum + (Number(el.getAttribute("data-ux-gain")) || 0), 0);
+      const efficiencyLift = Math.round(score * 0.42);
+
+      document.getElementById("ux-readiness-score").textContent = `${score}%`;
+      document.getElementById("ux-progress-bar").style.width = `${score}%`;
+      document.getElementById("ux-efficiency-lift").textContent = `+${efficiencyLift}% Task Speed`;
+
+      const statusEl = document.getElementById("ux-readiness-status");
+      if (score >= 50) {
+        statusEl.textContent = "Kesiapan tinggi: struktur pengalaman pelanggan online selaras dengan prinsip Chapter 10 & siap untuk eksperimen CRO lanjutan.";
+      } else if (score >= 30) {
+        statusEl.textContent = "Fondasi awal aktif—lengkapi aksesibilitas dan pengujian CRO berkelanjutan untuk hasil optimal.";
+      } else {
+        statusEl.textContent = "Tahap awal: prioritaskan tata letak mobile-first (>50% trafik), arsitektur informasi, dan aksesibilitas.";
+      }
+    }
+
+    // Pengiriman Pesan Langsung ke WhatsApp & Email (Form Utama)
+    function sendDirectInquiry(channel) {
+      const name = document.getElementById("inq-name").value.trim();
+      const org = document.getElementById("inq-org").value.trim();
+      const topic = document.getElementById("inq-topic").value;
+      const message = document.getElementById("inq-message").value.trim();
+
+      if (!name || !org || !message) {
+        showToast("Mohon lengkapi Nama, Organisasi/Brand/Proyek, dan Pesan terlebih dahulu.", true);
+        return;
+      }
+
+      const attribution = getChannelAttribution(`direct_form_${channel}`);
+      if (channel === "email") {
+        const subject = `Konsultasi Digital Marketing (Ch. 10) - ${org}`;
+        const body =
+          `Halo Bhinneka Digital Pulse,\n\n` +
+          `Atribusi Kanal/UTM: ${attribution}\n` +
+          `Nama: ${name}\n` +
+          `Organisasi / Brand / Proyek: ${org}\n` +
+          `Fokus Topik Chapter 10: ${topic}\n\n` +
+          `Pesan:\n${message}\n\n` +
+          `Terima kasih.`;
+        showToast(`Membuka Email ke ${CONTACT_EMAIL}...`);
+        window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        return;
+      }
+
+      const waText =
+        `Halo Bhinneka Digital Pulse! Saya ingin berdiskusi:\n\n` +
+        `• *Atribusi Kanal/UTM:* ${attribution}\n` +
+        `• *Nama:* ${name}\n` +
+        `• *Organisasi / Brand / Proyek:* ${org}\n` +
+        `• *Fokus Topik Chapter 10:* ${topic}\n` +
+        `• *Pesan:* ${message}`;
+
+      showToast("Membuka WhatsApp ke 0838-9908-2895...");
+      window.open(`https://wa.me/${CONTACT_WHATSAPP}?text=${encodeURIComponent(waText)}`, "_blank", "noopener,noreferrer");
+    }
+
+    // Modal Konsultasi
+    function openInquiryModal(source = "modal_cta") {
+      activeInquirySource = source;
+      document.getElementById("inquiry-modal").classList.remove("hidden");
+    }
+
+    function closeInquiryModal() {
+      document.getElementById("inquiry-modal").classList.add("hidden");
+    }
+
+    function submitModalInquiry(channel) {
+      const name = document.getElementById("modal-inq-name").value.trim();
+      const focus = document.getElementById("modal-inq-focus").value;
+      const note = document.getElementById("modal-inq-note").value.trim();
+
+      if (!name || !note) {
+        showToast("Mohon isi Nama dan Catatan Singkat terlebih dahulu.", true);
+        return;
+      }
+
+      const attribution = getChannelAttribution(`${activeInquirySource}_${channel}`);
+      if (channel === "email") {
+        const subject = `Diskusi Digital Marketing - ${focus}`;
+        const body =
+          `Halo Bhinneka Digital Pulse,\n\n` +
+          `Atribusi Kanal/UTM: ${attribution}\n` +
+          `Nama: ${name}\n` +
+          `Topik: ${focus}\n` +
+          `Catatan: ${note}\n`;
+        showToast(`Membuka Email ke ${CONTACT_EMAIL}...`);
+        window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        return;
+      }
+
+      const waText =
+        `Halo Bhinneka Digital Pulse!\n\n` +
+        `• *Atribusi Kanal/UTM:* ${attribution}\n` +
+        `• *Nama:* ${name}\n` +
+        `• *Topik:* ${focus}\n` +
+        `• *Catatan:* ${note}`;
+
+      showToast("Membuka WhatsApp ke 0838-9908-2895...");
+      window.open(`https://wa.me/${CONTACT_WHATSAPP}?text=${encodeURIComponent(waText)}`, "_blank", "noopener,noreferrer");
+    }
+
+    function openTheoryModal() {
+      document.getElementById("theory-modal").classList.remove("hidden");
+    }
+
+    function closeTheoryModal() {
+      document.getElementById("theory-modal").classList.add("hidden");
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById("mobile-menu");
+      const btn = document.getElementById("mobile-menu-btn");
+      const isHidden = menu.classList.contains("hidden");
+      menu.classList.toggle("hidden");
+      btn.setAttribute("aria-expanded", isHidden ? "true" : "false");
+    }
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        closeInquiryModal();
+        closeTheoryModal();
+      }
+    });
+
+    let toastTimer;
+    function showToast(message, isWarning = false) {
+      const box = document.getElementById("toast-box");
+      const msgEl = document.getElementById("toast-message");
+      const iconEl = document.getElementById("toast-icon");
+
+      msgEl.textContent = message;
+      iconEl.className = isWarning
+        ? "fa-solid fa-circle-exclamation text-rosebrand-400 text-base"
+        : "fa-solid fa-circle-check text-champagne-400 text-base";
+
+      box.classList.remove("hidden");
+      box.classList.add("flex");
+
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        box.classList.add("hidden");
+        box.classList.remove("flex");
+      }, 3200);
+    }
+
+    function initPureDigitalLanding() {
+      const yearEl = document.getElementById("year-now");
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+      selectProjectPhase("initiation", document.querySelector('.phase-btn[data-phase="initiation"]'));
+      recalculateUxSimulator();
+    }
+
+    if (document.readyState === "loading") {
+      window.addEventListener("DOMContentLoaded", initPureDigitalLanding);
+    } else {
+      initPureDigitalLanding();
+    }
+  </script>
+</body>
+</html>
